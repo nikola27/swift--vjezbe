@@ -1,0 +1,25 @@
+func skratiIme(_ ime: String) -> String {
+
+
+var imeMalaSlova = ime.lowercased()
+
+var samo = imeMalaSlova.CharacterSet(charactersIn: "aeiou")
+
+
+return samo
+
+}
+
+
+
+skratiIme("NikOLA")
+
+
+
+
+func shortNameFromName(name: String) -> String {
+let lowerName = name.lowercased()
+let vowelSet = CharacterSet(charactersIn:“aeiou”)
+let place = lowerName.rangeOfCharacter(from: vowelSet)!.lowerBound
+return String(lowerName[place…])
+}
